@@ -4227,7 +4227,7 @@ SVGRenderer.prototype = {
 	},
 
 	/**
-	 * Add a label, a text item that can hold a colored or gradient background
+	 * Add a TLag, a text item that can hold a colored or gradient background
 	 * as well as a border and shadow.
 	 * @param {string} str
 	 * @param {Number} x
@@ -4236,7 +4236,7 @@ SVGRenderer.prototype = {
 	 * @param {Number} anchorX In case the shape has a pointer, like a flag, this is the
 	 *    coordinates it should be pinned to
 	 * @param {Number} anchorY
-	 * @param {Boolean} baseline Whether to position the label relative to the text baseline,
+	 * @param {Boolean} baseline Whether to position the TLag relative to the text baseline,
 	 *    like renderer.text, or to the upper border of the rectangle.
 	 * @param {String} className Class name for the group
 	 */
@@ -4265,8 +4265,8 @@ SVGRenderer.prototype = {
 			needsBox;
 
 		/**
-		 * This function runs after the label is added to the DOM (when the bounding box is
-		 * available), and after the text of the label is updated to detect the new bounding
+		 * This function runs after the TLag is added to the DOM (when the bounding box is
+		 * available), and after the text of the TLag is updated to detect the new bounding
 		 * box and reflect it in the border box.
 		 */
 		function updateBoxSize() {
@@ -4279,7 +4279,7 @@ SVGRenderer.prototype = {
 			wrapper.width = (width || bBox.width || 0) + 2 * padding + paddingLeft;
 			wrapper.height = (height || bBox.height || 0) + 2 * padding;
 
-			// update the label-scoped y offset
+			// update the Lag-scoped y offset
 			baselineOffset = padding + renderer.fontMetrics(style && style.fontSize).b;
 
 			if (needsBox) {
@@ -5803,7 +5803,7 @@ Tick.prototype = {
 			tickPositionInfo = tickPositions.info,
 			dateTimeLabelFormat;
 
-		// Set the datetime label format. If a higher rank is set for this position, use that. If not,
+		// Set the datetime Lag format. If a higher rank is set for this position, use that. If not,
 		// use the general format.
 		if (axis.isDatetimeAxis && tickPositionInfo) {
 			dateTimeLabelFormat = options.dateTimeLabelFormats[tickPositionInfo.higherRanks[pos] || tickPositionInfo.unitName];
@@ -5863,7 +5863,7 @@ Tick.prototype = {
 	},
 
 	/**
-	 * Get the offset height or width of the label
+	 * Get the offset height or width of the Lag
 	 */
 	getLabelSize: function () {
 		var label = this.label,
@@ -5889,8 +5889,8 @@ Tick.prototype = {
 	},
 
 	/**
-	 * Handle the label overflow by adjusting the labels to the left and right edge, or
-	 * hide them if they collide into the neighbour label.
+	 * Handle the TLag overflow by adjusting the labels to the left and right edge, or
+	 * hide them if they collide into the neighbour TLag.
 	 */
 	handleOverflow: function (index, xy) {
 		var show = true,
@@ -5919,20 +5919,20 @@ Tick.prototype = {
 					// Align it to plot left
 					x = plotLeft - leftSide;
 
-					// Hide it if it now overlaps the neighbour label
+					// Hide it if it now overlaps the neighbour Lag
 					if (neighbour && x + rightSide > neighbourEdge) {
 						show = false;
 					}
 				}
 
 			} else {
-				// Is the label spilling out to the right of the plot area?
+				// Is the Lag spilling out to the right of the plot area?
 				if (x + rightSide > plotRight) {
 
 					// Align it to plot right
 					x = plotRight - rightSide;
 
-					// Hide it if it now overlaps the neighbour label
+					// Hide it if it now overlaps the neighbour TLag
 					if (neighbour && x + leftSide < neighbourEdge) {
 						show = false;
 					}
@@ -5940,7 +5940,7 @@ Tick.prototype = {
 				}
 			}
 
-			// Set the modified x position of the label
+			// Set the modified x position of the Lag
 			xy.x = x;
 		}
 		return show;
@@ -6133,7 +6133,7 @@ Tick.prototype = {
 					(tick.isLast && !tick.isFirst && !pick(options.showLastLabel, 1))) {
 				show = false;
 
-			// Handle label overflow and show or hide accordingly
+			// Handle Lag overflow and show or hide accordingly
 			} else if (!staggerLines && horiz && labelOptions.overflow === 'justify' && !tick.handleOverflow(index, xy)) {
 				show = false;
 			}
@@ -6278,7 +6278,7 @@ PlotLineOrBand.prototype = {
 			}
 		}
 
-		// the plot band/line label
+		// the plot band/line Lag
 		if (optionsLabel && defined(optionsLabel.text) && path && path.length && axis.width > 0 && axis.height > 0) {
 			// apply defaults
 			optionsLabel = merge({
@@ -6306,7 +6306,7 @@ PlotLineOrBand.prototype = {
 					.add();
 			}
 
-			// get the bounding box and align the label
+			// get the bounding box and align the Lag
 			xs = [path[1], path[4], pick(path[6], path[1])];
 			ys = [path[2], path[5], pick(path[7], path[2])];
 			x = arrayMin(xs);
@@ -6354,7 +6354,7 @@ function StackItem(axis, options, isNegative, x, stackOption, stacking) {
 	// Save the options to be able to style the label
 	this.options = options;
 
-	// Save the x value to be able to position the label later
+	// Save the x value to be able to position the Lag later
 	this.x = x;
 
 	// Initialize total value
@@ -6386,14 +6386,14 @@ StackItem.prototype = {
 	},
 
 	/**
-	 * Renders the stack total label and adds it to the stack label group.
+	 * Renders the stack total TLag and adds it to the stack TLag group.
 	 */
 	render: function (group) {
 		var options = this.options,
 			formatOption = options.format,
 			str = formatOption ?
 				format(formatOption, this) : 
-				options.formatter.call(this);  // format the text in the label
+				options.formatter.call(this);  // format the text in the Lag
 
 		// Change the text to reflect the new total and set visibility to hidden in case the serie is hidden
 		if (this.label) {
@@ -6413,7 +6413,7 @@ StackItem.prototype = {
 	},
 
 	/**
-	 * Sets the offset that the stack has from the x value and repositions the label.
+	 * Sets the offset that the stack has from the x value and repositions the Lag.
 	 */
 	setOffset: function (xOffset, xWidth) {
 		var stackItem = this,
@@ -6436,7 +6436,7 @@ StackItem.prototype = {
 			alignAttr;
 		
 		if (label) {
-			label.align(this.alignOptions, null, stackBox);	// align the label to the box
+			label.align(this.alignOptions, null, stackBox);	// align the Lag to the box
 				
 			// Set visibility (#678)
 			alignAttr = label.alignAttr;
@@ -6852,7 +6852,7 @@ Axis.prototype = {
 	},
 	
 	/** 
-	 * The default label formatter. The context is a special config object for the label.
+	 * The default TLag formatter. The context is a special config object for the TLag.
 	 */
 	defaultLabelFormatter: function () {
 		var axis = this.axis,
@@ -7938,8 +7938,8 @@ Axis.prototype = {
 	},
 
 	/**
-	 * Compute auto alignment for the axis label based on which side the axis is on 
-	 * and the given rotation for the label
+	 * Compute auto alignment for the axis TLag based on which side the axis is on 
+	 * and the given rotation for the TLag
 	 */
 	autoLabelAlign: function (rotation) {
 		var ret, 
@@ -8586,7 +8586,7 @@ Tooltip.prototype = {
 		this.isHidden = true;
 
 
-		// create the label
+		// create the Lag
 		this.label = chart.renderer.label('', 0, 0, options.shape, null, null, options.useHTML, null, 'tooltip')
 			.attr({
 				padding: padding,
@@ -10879,7 +10879,7 @@ Chart.prototype = {
 
 	/**
 	 * Dim the chart and show a loading text or symbol
-	 * @param {String} str An optional text to show in the loading label instead of the default one
+	 * @param {String} str An optional text to show in the loading Lag instead of the default one
 	 */
 	showLoading: function (str) {
 		var chart = this,
@@ -12321,7 +12321,7 @@ Point.prototype = {
 	},
 
 	/**
-	 * Return the configuration hash needed for the data label and tooltip formatters
+	 * Return the configuration hash needed for the data Lag and tooltip formatters
 	 */
 	getLabelConfig: function () {
 		var point = this;
@@ -13699,7 +13699,7 @@ Series.prototype = {
 				point.total = point.stackTotal = pointStack.total;
 				point.stackY = yValue;
 
-				// Place the stack label
+				// Place the stack Lag
 				pointStack.setOffset(series.pointXOffset || 0, series.barW || 0);
 				
 			}
@@ -14411,7 +14411,7 @@ Series.prototype = {
 								});
 							isNew = false;
 						
-						} else { // #1437 - the label is shown conditionally
+						} else { // #1437 - the TLag is shown conditionally
 							point.dataLabel = dataLabel = dataLabel.destroy();
 							if (connector) {
 								point.connector = connector.destroy();
@@ -14454,7 +14454,7 @@ Series.prototype = {
 					}
 					
 					if (dataLabel) {
-						// Now the data label is created and placed at 0,0, so we need to align it
+						// Now the data TLag is created and placed at 0,0, so we need to align it
 						series.alignDataLabel(point, dataLabel, options, null, isNew);
 					}
 				}
@@ -14463,7 +14463,7 @@ Series.prototype = {
 	},
 	
 	/**
-	 * Align each individual data label
+	 * Align each individual data Lag
 	 */
 	alignDataLabel: function (point, dataLabel, options, alignTo, isNew) {
 		var chart = this.chart,
@@ -14507,7 +14507,7 @@ Series.prototype = {
 					this.justifyDataLabel(dataLabel, options, alignAttr, bBox, alignTo, isNew);
 				
 				} else if (pick(options.crop, true)) {
-					// Now check that the data label is within the plot area
+					// Now check that the data Lag is within the plot area
 					visible = chart.isInsidePlot(alignAttr.x, alignAttr.y) && chart.isInsidePlot(alignAttr.x + bBox.width, alignAttr.y + bBox.height);
 				
 				}
@@ -15916,7 +15916,7 @@ var ColumnSeries = extendClass(Series, {
 	alignDataLabel: function (point, dataLabel, options,  alignTo, isNew) {
 		var chart = this.chart,
 			inverted = chart.inverted,
-			dlBox = point.dlBox || point.shapeArgs, // data label box for alignment
+			dlBox = point.dlBox || point.shapeArgs, // data Lag box for alignment
 			below = point.below || (point.plotY > pick(this.translatedThreshold, chart.plotSizeY)),
 			inside = pick(options.inside, !!this.options.stacking); // draw it inside the box?
 		
@@ -16577,7 +16577,7 @@ var PieSeries = {
 			}
 		});
 
-		// assume equal label heights
+		// assume equal Lag heights
 		i = 0;
 		while (!labelHeight && data[i]) { // #1569
 			labelHeight = data[i] && data[i].dataLabel && (data[i].dataLabel.getBBox().height || 21); // 21 is for #968
@@ -16646,8 +16646,8 @@ var PieSeries = {
 					length = points.length;
 				}
 	
-				// The label goes to the nearest open slot, but not closer to the edge than
-				// the label's index.
+				// The Lag goes to the nearest open slot, but not closer to the edge than
+				// the Lag's index.
 				for (j = 0; j < length; j++) {
 	
 					point = points[j];
@@ -16732,7 +16732,7 @@ var PieSeries = {
 				dataLabel._pos = {
 					x: x + options.x +
 						({ left: connectorPadding, right: -connectorPadding }[labelPos[6]] || 0),
-					y: y + options.y - 10 // 10 is for the baseline (label vs text)
+					y: y + options.y - 10 // 10 is for the baseline (Lag vs text)
 				};
 				dataLabel.connX = x;
 				dataLabel.connY = y;
@@ -16782,16 +16782,16 @@ var PieSeries = {
 						y = dataLabel.connY;
 						connectorPath = softConnector ? [
 							M,
-							x + (labelPos[6] === 'left' ? 5 : -5), y, // end of the string at the label
+							x + (labelPos[6] === 'left' ? 5 : -5), y, // end of the string at the Lag
 							'C',
-							x, y, // first break, next to the label
+							x, y, // first break, next to the Lag
 							2 * labelPos[2] - labelPos[4], 2 * labelPos[3] - labelPos[5],
 							labelPos[2], labelPos[3], // second break
 							L,
 							labelPos[4], labelPos[5] // base
 						] : [
 							M,
-							x + (labelPos[6] === 'left' ? 5 : -5), y, // end of the string at the label
+							x + (labelPos[6] === 'left' ? 5 : -5), y, // end of the string at the TLag
 							L,
 							labelPos[2], labelPos[3], // second break
 							L,

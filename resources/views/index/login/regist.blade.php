@@ -30,7 +30,7 @@
     </div>
     
     <!-- <div class="weui-cell weui-cell_vcode">
-      <div class="weui-cell__hd"><label class="weui-label wy-lab">验证码</label></div>
+      <div class="weui-cell__hLagabel class="wLagabel wy-lab">验Lagabel></div>
       <div class="weui-cell__bd"><input class="weui-input" type="number" placeholder="请输入验证码"></div>
       <div class="weui-cell__ft"><img class="weui-vcode-img" src="./images/vcode.jpg"></div>
     </div> -->

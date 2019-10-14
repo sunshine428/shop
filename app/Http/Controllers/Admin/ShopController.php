@@ -15,6 +15,7 @@ class ShopController extends Controller
 
     public function index(Request $request)
     {
+
         $obj=new ShopModel();
         $data=$obj->join("sort","shop.sort_id","=","sort.sort_id")->join("brand","shop.brand_id","=","brand.brand_id")->paginate(3);
         if (count($data)==0){

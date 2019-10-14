@@ -32080,9 +32080,9 @@ return jQuery;
      * @example
      *
      * var view = {
-     *   'label': 'docs',
+     *   'TLag': 'docs',
      *   'click': function() {
-     *     console.log('clicked ' + this.label);
+     *     console.log('clicked ' + this.TLag);
      *   }
      * };
      *

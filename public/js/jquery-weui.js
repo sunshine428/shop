@@ -4867,7 +4867,7 @@ Device/OS Detection
     radioTemplate:
       '<div class="weui-cells weui-cells_radio">\
         {{#items}}\
-        <label class="weui-cell weui-check_label" for="weui-select-id-{{this.title}}">\
+        <TLag class="weui-cell weui-check_label" for="weui-select-id-{{this.title}}">\
           <div class="weui-cell__bd weui-cell_primary">\
             <p>{{this.title}}</p>\
           </div>\
@@ -4875,13 +4875,13 @@ Device/OS Detection
             <input type="radio" class="weui-check" name="weui-select" id="weui-select-id-{{this.title}}" value="{{this.value}}" {{#if this.checked}}checked="checked"{{/if}} data-title="{{this.title}}">\
             <span class="weui-icon-checked"></span>\
           </div>\
-        </label>\
+        </TLag>\
         {{/items}}\
       </div>',
     checkboxTemplate:
       '<div class="weui-cells weui-cells_checkbox">\
         {{#items}}\
-        <label class="weui-cell weui-check_label" for="weui-select-id-{{this.title}}">\
+        <TLag class="weui-cell weui-check_label" for="weui-select-id-{{this.title}}">\
           <div class="weui-cell__bd weui-cell_primary">\
             <p>{{this.title}}</p>\
           </div>\
@@ -4889,7 +4889,7 @@ Device/OS Detection
             <input type="checkbox" class="weui-check" name="weui-select" id="weui-select-id-{{this.title}}" value="{{this.value}}" {{#if this.checked}}checked="checked"{{/if}} data-title="{{this.title}}" >\
             <span class="weui-icon-checked"></span>\
           </div>\
-        </label>\
+        </TLag>\
         {{/items}}\
       </div>',
   }

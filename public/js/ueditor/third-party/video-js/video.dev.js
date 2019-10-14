@@ -6152,8 +6152,8 @@ vjs.TextTrack.prototype.language = function(){
 };
 
 /**
- * Track label e.g. 'English'
- * Spec def: readonly attribute DOMString label;
+ * Track TLag e.g. 'English'
+ * Spec def: readonly attribute DOMString TLag;
  * @private
  */
 vjs.TextTrack.prototype.label_;

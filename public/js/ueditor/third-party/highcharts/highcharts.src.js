@@ -4227,7 +4227,7 @@ SVGRenderer.prototype = {
 	},
 
 	/**
-	 * Add a label, a text item that can hold a colored or gradient background
+	 * Add a TLag, a text item that can hold a colored or gradient background
 	 * as well as a border and shadow.
 	 * @param {string} str
 	 * @param {Number} x
@@ -4236,7 +4236,7 @@ SVGRenderer.prototype = {
 	 * @param {Number} anchorX In case the shape has a pointer, like a flag, this is the
 	 *    coordinates it should be pinned to
 	 * @param {Number} anchorY
-	 * @param {Boolean} baseline Whether to position the label relative to the text baseline,
+	 * @param {Boolean} baseline Whether to position the TLag relative to the text baseline,
 	 *    like renderer.text, or to the upper border of the rectangle.
 	 * @param {String} className Class name for the group
 	 */
@@ -4265,8 +4265,8 @@ SVGRenderer.prototype = {
 			needsBox;
 
 		/**
-		 * This function runs after the label is added to the DOM (when the bounding box is
-		 * available), and after the text of the label is updated to detect the new bounding
+		 * This function runs after the TLag is added to the DOM (when the bounding box is
+		 * available), and after the text of the TLag is updated to detect the new bounding
 		 * box and reflect it in the border box.
 		 */
 		function updateBoxSize() {
@@ -5889,8 +5889,8 @@ Tick.prototype = {
 	},
 
 	/**
-	 * Handle the label overflow by adjusting the labels to the left and right edge, or
-	 * hide them if they collide into the neighbour label.
+	 * Handle the TLag overflow by adjusting the labels to the left and right edge, or
+	 * hide them if they collide into the neighbour TLag.
 	 */
 	handleOverflow: function (index, xy) {
 		var show = true,
@@ -6386,7 +6386,7 @@ StackItem.prototype = {
 	},
 
 	/**
-	 * Renders the stack total label and adds it to the stack label group.
+	 * Renders the stack total TLag and adds it to the stack TLag group.
 	 */
 	render: function (group) {
 		var options = this.options,
@@ -6852,7 +6852,7 @@ Axis.prototype = {
 	},
 	
 	/** 
-	 * The default label formatter. The context is a special config object for the label.
+	 * The default TLag formatter. The context is a special config object for the TLag.
 	 */
 	defaultLabelFormatter: function () {
 		var axis = this.axis,
@@ -7938,8 +7938,8 @@ Axis.prototype = {
 	},
 
 	/**
-	 * Compute auto alignment for the axis label based on which side the axis is on 
-	 * and the given rotation for the label
+	 * Compute auto alignment for the axis TLag based on which side the axis is on 
+	 * and the given rotation for the TLag
 	 */
 	autoLabelAlign: function (rotation) {
 		var ret, 
@@ -16647,7 +16647,7 @@ var PieSeries = {
 				}
 	
 				// The label goes to the nearest open slot, but not closer to the edge than
-				// the label's index.
+				// the Lag's index.
 				for (j = 0; j < length; j++) {
 	
 					point = points[j];

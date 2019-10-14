@@ -215,7 +215,7 @@ var radialAxisMixin = {
 		// Call the Axis prototype method (the method we're in now is on the instance)
 		axisProto.getOffset.call(this);
 		
-		// Title or label offsets are not counted
+		// Title or Lag offsets are not counted
 		this.chart.axisOffset[this.side] = 0;
 	},
 

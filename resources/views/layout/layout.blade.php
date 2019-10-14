@@ -107,7 +107,17 @@
       <a class="dropdown-item" href="/shop/save">商品添加</a>
       <a class="dropdown-item" href="/shop/index">商品展示</a>
     </div>
-  </div>
+    </div>
+    <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            标签管理
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="/shop/tag_list">标签列表</a>
+            <a class="dropdown-item" href="/shop/index">粉丝列表</a>
+        </div>
+    </div>
 </div>
       @show
     </div>

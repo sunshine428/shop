@@ -20,6 +20,7 @@ Route::group(['middleware'=>['CheckLogin']],function(){
     Route::any('/shop/index','Admin\ShopController@index');
     Route::any('/shop/save','Admin\ShopController@save');
     Route::any('/shop/info','Admin\ShopController@info');
+
     //删除
     Route::any('/shop/delete/{id}','Admin\ShopController@delete');
     //修改
@@ -68,6 +69,40 @@ Route::group(['middleware'=>['CheckLogin']],function(){
     Route::get('/logout', 'admin\UserController@logout')->name('logout');
 
     Route::get('/send', 'admin\UserController@send');
+
+    //标签
+    Route::any('/shop/tag_list','Admin\TagController@Tag_list');
+    Route::any('/shop/add_tag','Admin\TagController@add_tag');
+    Route::any('/shop/do_add_tag','Admin\TagController@do_add_tag');
+    Route::any('/shop/update_tag','Admin\TagController@update_tag');
+    Route::any('/shop/do_update_tag','Admin\TagController@do_update_tag');
+    Route::any('/shop/del_tag','Admin\TagController@del_tag');
+
+    // 用户管理 微信
+    // 标签 管理
+    Route::any('/wechat/sign','wechat\SignController@sign');//添加表签
+    Route::any('/wechat/signindex','wechat\SignController@signindex');//表签列表
+    Route::any('/wechat/delsign','wechat\SignController@delsign');//表签删除
+    Route::any('/wechat/updatesign','wechat\SignController@updatesign');//表签修改
+    // 粉丝 管理
+    Route::any('/wechat/fans','wechat\FansController@fans');//粉丝列表
+    Route::any('/wechat/addsign','wechat\FansController@addsign');//加标签
+    Route::any('/wechat/tagsign','wechat\FansController@tagsign');//查看所属标签
+    Route::any('/wechat/tagfans','wechat\FansController@tagfans');//当前标签下的粉丝
+    Route::any('/wechat/delfans','wechat\FansController@delfans');//取消当前标签下的粉丝
+
+
+    Route::any('/wechat/wechat','wechat\WachatController@wechat');
+    Route::any('/wechat/index','wechat\WachatController@index');
+    Route::any('/weui/userinfo','wechat\WachatController@userinfo');
+    Route::any('/weui/wechatcode','wechat\WachatController@wechatcode');
+
+    Route::any('/weui/curlget','wechat\WachatController@curlget');
+    Route::any('/weui/curlpost','wechat\WachatController@curlpost');
+
+    //日志
+    Route::any('/wechat/event','wechat\EvntController@event');
+
 
 });
 

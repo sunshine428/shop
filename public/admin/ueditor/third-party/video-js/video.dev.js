@@ -609,7 +609,7 @@ vjs.createEl = function(tagName, properties){
       // Not remembering why we were checking for dash
       // but using setAttribute means you have to use getAttribute
 
-      // The check for dash checks for the aria-* attributes, like aria-label, aria-valuemin.
+      // The check for dash checks for the aria-* attributes, like aria-Lag, aria-valuemin.
       // The additional check for "role" is because the default method for adding attributes does not
       // add the attribute "role". My guess is because it's not a valid attribute in some namespaces, although
       // browsers handle the attribute just fine. The W3C allows for aria-* attributes to be used in pre-HTML5 docs.
@@ -5963,7 +5963,7 @@ vjs.Player.prototype.textTracks = function(){
  * In addition to the W3C settings we allow adding additional info through options.
  * http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#dom-media-addtexttrack
  * @param {String}  kind        Captions, subtitles, chapters, descriptions, or metadata
- * @param {String=} label       Optional label
+ * @param {String=} label       Optional Lag
  * @param {String=} language    Optional language
  * @param {Object=} options     Additional track options, like src
  * @private
@@ -6152,8 +6152,8 @@ vjs.TextTrack.prototype.language = function(){
 };
 
 /**
- * Track label e.g. 'English'
- * Spec def: readonly attribute DOMString label;
+ * Track TLag e.g. 'English'
+ * Spec def: readonly attribute DOMString TLag;
  * @private
  */
 vjs.TextTrack.prototype.label_;

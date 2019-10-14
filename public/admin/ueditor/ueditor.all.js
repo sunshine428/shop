@@ -26788,7 +26788,7 @@ UE.ui = baidu.editor.ui = {};
         renderLabelHtml:function () {
             return '<div class="edui-arrow"></div>' +
                 '<div class="edui-box edui-icon"></div>' +
-                '<div class="edui-box edui-label %%-label">' + (this.label || '') + '</div>';
+                '<div class="edui-box edui-TLag %%-TLag">' + (this.label || '') + '</div>';
         },
         getStateDom:function () {
             return this.getDom();
@@ -28110,7 +28110,7 @@ UE.ui = baidu.editor.ui = {};
                 value:val,
                 theme:editor.options.theme,
                 renderLabelHtml:function () {
-                    return '<div class="edui-label %%-label" >' + (this.label || '') + '</div>';
+                    return '<div class="edui-TLag %%-TLag" >' + (this.label || '') + '</div>';
                 }
             });
         });
@@ -28174,7 +28174,7 @@ UE.ui = baidu.editor.ui = {};
                     value:val,
                     theme:editor.options.theme,
                     renderLabelHtml:function () {
-                        return '<div class="edui-label %%-label" style="font-family:' +
+                        return '<div class="edui-TLag %%-TLag" style="font-family:' +
                             utils.unhtml(this.value) + '">' + (this.label || '') + '</div>';
                     }
                 });
@@ -28235,7 +28235,7 @@ UE.ui = baidu.editor.ui = {};
                 value:size,
                 theme:editor.options.theme,
                 renderLabelHtml:function () {
-                    return '<div class="edui-label %%-label" style="line-height:1;font-size:' +
+                    return '<div class="edui-TLag %%-TLag" style="line-height:1;font-size:' +
                         this.value + '">' + (this.label || '') + '</div>';
                 }
             });
@@ -28280,7 +28280,7 @@ UE.ui = baidu.editor.ui = {};
                 label:list[i] || editor.getLang("paragraph")[i],
                 theme:editor.options.theme,
                 renderLabelHtml:function () {
-                    return '<div class="edui-label %%-label"><span class="edui-for-' + this.value + '">' + (this.label || '') + '</span></div>';
+                    return '<div class="edui-TLag %%-TLag"><span class="edui-for-' + this.value + '">' + (this.label || '') + '</span></div>';
                 }
             })
         }
@@ -28338,7 +28338,7 @@ UE.ui = baidu.editor.ui = {};
                     value:ck,
                     theme:editor.options.theme,
                     renderLabelHtml:function () {
-                        return '<div class="edui-label %%-label">' + '<' + ck.tag + ' ' + (ck.className ? ' class="' + ck.className + '"' : "")
+                        return '<div class="edui-TLag %%-TLag">' + '<' + ck.tag + ' ' + (ck.className ? ' class="' + ck.className + '"' : "")
                             + (ck.style ? ' style="' + ck.style + '"' : "") + '>' + ck.label + "<\/" + ck.tag + ">"
                             + '</div>';
                     }

@@ -87,6 +87,21 @@ Route::group(['middleware'=>['IndexLogin']],function(){
     //交易记录
     Route::any('/index/record','Index\UserController@record');
 
+
+    //缓存
+    Route::any('/redis','Redis\RedisController@index');
+    Route::any('/token','Redis\RedisController@get_wechat_token');
+
+
+    Route::any('/index/wechat','wechat\WachatController@wechat');
+    Route::any('/index/index','wechat\WachatController@index');
+
+    Route::any('/index/userinfo','wechat\WachatController@userinfo');
+    Route::any('/index/wechatcode','wechat\WachatController@wechatcode');
+
+    Route::any('/index/qq','wechat\WachatController@qq');
+
+
 });
 
 

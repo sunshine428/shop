@@ -31,9 +31,9 @@
                 <input type="password" name="pwd" value="" placeholder="请输入您的密码" />        
             </div>
             <input type="submit" value="登陆" class="login-btn common-div">
-            <a href="javascript:;" class="login-oth-btn common-div">微信登陆</a>
-            <a href="javascript:;" class="login-oth-btn common-div">QQ登陆</a>
         </form>
+        <a href="/index/userinfo" class="login-oth-btn common-div">微信登陆</a>
+        <a href="javascript:;" class="login-oth-btn common-div">QQ登陆</a>
     </div>
     <div class="forgets">
     	<a href="psd_chage.html">忘记密码？</a>
@@ -50,6 +50,5 @@
 </script>
 
 <script src="/js/jquery-weui.js"></script>
-
 </body>
 </html>

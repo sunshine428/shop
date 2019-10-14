@@ -9,7 +9,7 @@ class UserModels extends Model
     //
     public $table = "user";
     protected $dateFormat = 'U';
-    //public $timestamps = false;
+//    public $timestamps = false;
     protected $primaryKey = 'uid';
     protected $guarded = [];
 }
