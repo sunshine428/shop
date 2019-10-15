@@ -7,21 +7,22 @@
 
 @section('content')
     <div>
-        <h2><font color='blue'>粉丝列表</font></h2>
+        <h3 style="text-align: center ;"><font color='blue' style="color:orangered">粉丝列表</font></h3>
     </div>
+    <br>
     <form action="{{ url('/wechat/addsign') }}" method="post">
         <input type="hidden" name="id" value="{{ $id }}">
-    <table class="layui-table">
+    <table class="layui-table" border="1" cellspacing="0">
         <thead>
             <tr>
-                <th>编号</th>
-                <th>openid：</th>
-                <th>用户名：</th>
-                <th>性别：</th>
-                <th>头像：</th>
-                <th>地区：</th>
-                <th>关注时间：</th>
-                <th>所属标签：</th>
+                <th style="width:50px;height: 60px;text-align: center">编号</th>
+                <th style="text-align: center">openid：</th>
+                <th style="text-align: center">用户名：</th>
+                <th style="text-align: center;width:80px;height: 60px">性别：</th>
+                <th style="text-align: center;width:80px;height: 60px">头像：</th>
+                <th style="text-align: center">地区：</th>
+                <th style="text-align: center">关注时间：</th>
+                <th style="text-align: center;width:120px;height: 60px">所属标签：</th>
             </tr>
         </thead>
         <tbody>
@@ -45,8 +46,8 @@
                     <input type="button"  class="btn btn-danger" value="取消标签" id="but">
                 </td>
             </tr>
-        @else
-            <span>到底了</span>
+
+
         @endif
     </table>
     </form>

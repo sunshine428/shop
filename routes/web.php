@@ -91,6 +91,9 @@ Route::group(['middleware'=>['CheckLogin']],function(){
     Route::any('/wechat/tagfans','wechat\FansController@tagfans');//当前标签下的粉丝
     Route::any('/wechat/delfans','wechat\FansController@delfans');//取消当前标签下的粉丝
 
+    Route::any('/wechat/push_tag_msg','wechat\MsgController@push_tag_msg');//发送消息
+    //模板消息
+    Route::get('/wechat/push_template_msg','wechat\MsgController@push_template_msg');//推送模板消息
 
     Route::any('/wechat/wechat','wechat\WachatController@wechat');
     Route::any('/wechat/index','wechat\WachatController@index');

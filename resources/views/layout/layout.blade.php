@@ -114,8 +114,8 @@
         </a>
 
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="/shop/tag_list">标签列表</a>
-            <a class="dropdown-item" href="/shop/index">粉丝列表</a>
+            <a class="dropdown-item" href="/wechat/signindex">标签列表</a>
+            <a class="dropdown-item" href="/wechat/fans">粉丝列表</a>
         </div>
     </div>
 </div>

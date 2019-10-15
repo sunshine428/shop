@@ -14,7 +14,7 @@
                 <input type="text" name="sign_name" required  lay-verify="required" placeholder="请输入标签名称" autocomplete="off" class="layui-input">@php echo $errors->first('brand_name')@endphp
             </div>
         </div>
-
+        <br>
         <div class="layui-form-item">
             <div class="layui-input-block">
                 <input type="submit" class="layui-btn" lay-submit lay-filter="formDemo" value="立即提交" id="btn">
