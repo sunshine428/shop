@@ -100,11 +100,13 @@ Route::group(['middleware'=>['CheckLogin']],function(){
     Route::any('/weui/curlget','wechat\WachatController@curlget');
     Route::any('/weui/curlpost','wechat\WachatController@curlpost');
 
-    //日志
-    Route::any('/wechat/event','wechat\EvntController@event');
+
 
 
 });
 
+
+//日志
+Route::any('/wechat/event','wechat\EventController@event');
 
 
