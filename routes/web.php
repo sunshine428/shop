@@ -112,11 +112,12 @@ Route::post('/wechat/do_upload','wechat\ResourceController@do_upload');
 Route::get('/wechat/source_list','wechat\ResourceController@source_list');
 Route::any('/wechat/resource_list','wechat\ResourceController@resource_list');
 
-//自定义菜单
-Route::any('/wechat/wechat_menu','wechat\MenuController@wechat_menu');
-Route::any('/wechat/load_meun','wechat\MenuController@load_meun');
+// 菜单管理
+Route::any('/wechat/menu_add','wechat\MenuController@menu_add');
+Route::any('/wechat/menu_create','wechat\MenuController@menu_create');
+Route::any('/wechat/array','wechat\MenuController@array');
 
-
+/** 中间件---留言 */
 Route::any('/wechat_message_login','wechat\MessageController@wechat_message_login')->name('wechat_message_login');//微信登录
 Route::group(['middleware'=>['MessageLogin']],function(){
     Route::get('/','Admin\ShopController@index');
