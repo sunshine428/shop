@@ -129,6 +129,18 @@
             <a class="dropdown-item" href="/wechat/menu_list">菜单列表</a>
         </div>
     </div>
+    {{-- 素材管理 --}}
+    <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            素材 管理
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="/wechat/resource_list">素材展示</a>
+            <a class="dropdown-item" href="/wechat/upload">素材添加</a>
+            <a class="dropdown-item" href="/wechat/qrcode">生成二维码</a>
+        </div>
+    </div>
 </div>
       @show
     </div>

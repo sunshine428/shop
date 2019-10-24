@@ -136,3 +136,4 @@ Route::any('/wechat/sdk','wechat\QrcodeController@sdk');
 
 // 课程
 Route::any('/wechat/course','wechat\CourseController@course');
+

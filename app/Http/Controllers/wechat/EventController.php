@@ -25,8 +25,6 @@ class EventController extends Controller
         $info = CurlController::getuser($xml_arr['FromUserName']);
         $user=UserintModels::where('openid','=',$xml_arr['FromUserName'])->first();
         $openid_info = OpenidModel::where(['openid'=>$xml_arr['FromUserName']])->first();
-
-
         if($xml_arr['MsgType'] == 'event' && $xml_arr['Event'] == 'subscribe'){
             //判断openid表是否有当前openid   生成的二维码
             if(empty($openid_info)){

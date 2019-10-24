@@ -1,4 +1,4 @@
-@extends('layout.layui')
+@extends('layout.layout')
 
 @section('title')
     素材 展示
