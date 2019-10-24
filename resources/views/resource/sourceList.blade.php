@@ -1,7 +1,7 @@
 @extends('layout.layout')
 
 @section('title')
-    文件上传
+    素材列表
 @endsection
 
 @section('content')
@@ -12,8 +12,8 @@
         <button style="background: mediumpurple;border-radius:7px">缩略图</button>
         <br>
         <br>
-        <table border="1" cellspacing="0" style="border:1px solid deepskyblue">
-            <tr style="text-align: center">
+        <table border="1" cellspacing="0" style="border:1px solid deepskyblue;">
+            <tr style="text-align: center;">
                 <td>ID</td>
                 <td>media_id</td>
                 <td>path</td>

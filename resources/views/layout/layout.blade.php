@@ -132,7 +132,7 @@
     {{-- 素材管理 --}}
     <div class="dropdown">
         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            素材 管理
+            素材管理
         </a>
 
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">

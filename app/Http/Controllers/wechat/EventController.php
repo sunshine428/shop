@@ -22,6 +22,7 @@ class EventController extends Controller
         $xml_arr=(array)$xml_obj;
         //dd($xml_arr);
         // 关注 回复
+
         $info = CurlController::getuser($xml_arr['FromUserName']);
         $user=UserintModels::where('openid','=',$xml_arr['FromUserName'])->first();
         $openid_info = OpenidModel::where(['openid'=>$xml_arr['FromUserName']])->first();
