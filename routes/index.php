@@ -104,5 +104,8 @@ Route::group(['middleware'=>['IndexLogin']],function(){
 
 });
 
-
+Route::any('/wechat/wechat','wechat\WachatController@wechat');
+Route::any('/wechat/index','wechat\WachatController@index');
+Route::any('/index/userinfo','wechat\WachatController@userinfo');
+Route::any('/index/wechatcode','wechat\WachatController@wechatcode');
 

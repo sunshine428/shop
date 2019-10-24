@@ -116,6 +116,17 @@
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
             <a class="dropdown-item" href="/wechat/signindex">标签列表</a>
             <a class="dropdown-item" href="/wechat/fans">粉丝列表</a>
+            <a class="dropdown-item" href="/wechat/message_list">留言主页</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            自定义菜单
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="/wechat/wechat_menu">菜单</a>
+            <a class="dropdown-item" href="/wechat/menu_list">菜单列表</a>
         </div>
     </div>
 </div>

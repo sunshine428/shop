@@ -65,7 +65,8 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         //自定义规则 后台 方非法登录
         'CheckLogin'=> \App\Http\Middleware\CheckLogin::class,
-        'IndexLogin'=> \App\Http\Middleware\IndexLogin::class
+        'IndexLogin'=> \App\Http\Middleware\IndexLogin::class,
+        'MessageLogin'=> \App\Http\Middleware\MessageLogin::class,
     ];
 
     /**

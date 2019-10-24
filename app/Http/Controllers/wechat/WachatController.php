@@ -52,7 +52,7 @@ class WachatController extends Controller
     public function userinfo()
     {
         //$url = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-        $app = urlencode(env('APP_URl').'/weui/wechatcode');
+        $app = urlencode(env('APP_URl').'/index/wechatcode');
         // 第一步：用户同意授权，获取code
         $url = "location:https://open.weixin.qq.com/connect/oauth2/authorize?appid=".env('WECGAT_APPID')."&redirect_uri=$app&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
         // dd($url);
@@ -82,13 +82,20 @@ class WachatController extends Controller
             $res=CsUser::where('user_id','=',$user_id)->first();
             if ($res){
                 $data=$request->session()->put('userinfo',$res);
-                return redirect('/weui/index');
+                return redirect('/index/shop');
             }else{
                 return redirect()->back();
             }
         }else{
             $data=$request->session()->put('userinfo',$info);
-            return redirect('/weui/index');
+            return redirect('/index/shop');
         }
+    }
+    public function aaa()
+    {
+        $data = "o3y6ow3hkD1vfJYHP6hX-4okAC_4";
+        $info = CurlController::get_wechat_user($data);
+        dd($info);
+
     }
 }

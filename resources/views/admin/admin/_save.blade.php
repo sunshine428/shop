@@ -1,7 +1,7 @@
 @extends('layout.layout')
 
 @section('title')
-用户添加
+    用户添加
 @endsection
 
 @section('content')

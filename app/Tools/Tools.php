@@ -83,7 +83,7 @@ class Tools
 //        $post_data=[
 //            'name'=>222
 //        ];
-//        curl_setopt($curl,CURLOPT_POSTFIELDS,$post_data);
+        curl_setopt($curl,CURLOPT_POSTFIELDS,$data);
         $res=curl_exec($curl);
 //        var_dump($res);
         curl_close($curl);
