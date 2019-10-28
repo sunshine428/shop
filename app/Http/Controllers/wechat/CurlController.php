@@ -43,6 +43,7 @@ class CurlController extends Controller
     // 获取taken
     public static function get_access_token()
     {
+
         if(\Cache::has('access_token')){
             $value = \Cache::get('access_token');
         }else{

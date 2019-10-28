@@ -16,13 +16,12 @@ class EventController extends Controller
     public function event(){
         //echo $_GET['echostr'];
         $info=file_get_contents("php://input");
-        file_put_contents(storage_path('logs/wechat/'.date("Y-m-d").'.log'),"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n",FILE_APPEND);
+        file_put_contents(storage_path('logs/wechat/'.date(  "Y-m-d").'.log'),"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n",FILE_APPEND);
         file_put_contents(storage_path('logs/wechat/'.date("Y-m-d").'.log'),"$info\n",FILE_APPEND);
         $xml_obj=simplexml_load_string($info,'SimpleXMLElement',LIBXML_NOCDATA);
         $xml_arr=(array)$xml_obj;
         //dd($xml_arr);
         // 关注 回复
-
         $info = CurlController::getuser($xml_arr['FromUserName']);
         $user=UserintModels::where('openid','=',$xml_arr['FromUserName'])->first();
         $openid_info = OpenidModel::where(['openid'=>$xml_arr['FromUserName']])->first();

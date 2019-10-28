@@ -88,7 +88,6 @@ class MenuController extends Controller
         ];
         $arr = json_encode($data, JSON_UNESCAPED_UNICODE);
         $data = CurlController::curlpost($url,$arr);
-
         dd($data);
     }
     // 菜单
@@ -142,7 +141,7 @@ class MenuController extends Controller
         $this->array();
     }
     // 数组 拼接
-    public function  array()
+    public function  isarray()
     {
         $menu_list = MenuModels::where(['parent_id'=>0])->get();
         $data = [];

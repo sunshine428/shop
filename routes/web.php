@@ -115,7 +115,7 @@ Route::any('/wechat/resource_list','wechat\ResourceController@resource_list');
 // 菜单管理
 Route::any('/wechat/menu_add','wechat\MenuController@menu_add');
 Route::any('/wechat/menu_create','wechat\MenuController@menu_create');
-Route::any('/wechat/array','wechat\MenuController@array');
+Route::any('/wechat/array','wechat\MenuController@isarray');
 
 /** 中间件---留言 */
 Route::any('/wechat_message_login','wechat\MessageController@wechat_message_login')->name('wechat_message_login');//微信登录
@@ -137,4 +137,6 @@ Route::any('/wechat/sdk','wechat\QrcodeController@sdk');
 
 // 课程
 Route::any('/wechat/course','wechat\CourseController@course');
+// 自定义菜单
+Route::any('/wechat/menu','wechat\MenuController@menu');
 
