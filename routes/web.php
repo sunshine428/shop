@@ -140,3 +140,6 @@ Route::any('/wechat/course','wechat\CourseController@course');
 // 自定义菜单
 Route::any('/wechat/menu','wechat\MenuController@menu');
 
+
+Route::any('/wechat/exam','wechat\ExamController@exam');
+

@@ -132,4 +132,5 @@ class CurlController extends Controller
 //        return $res;
         dd($res);
     }
+
 }
